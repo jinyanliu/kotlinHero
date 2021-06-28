@@ -1,0 +1,7 @@
+rootProject.name = 'kotlinHero'
+include 'kotlinHero2021'
+include 'untitled'
+include 'kotlinHero2021'
+include 'untitled'
+include 'kh2021'
+

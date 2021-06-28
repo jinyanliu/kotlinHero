@@ -1,0 +1,4 @@
+# Project exclude paths
+/.gradle/
+/kotlinHero2021/.gradle/
+/kotlinHero2021/build/
