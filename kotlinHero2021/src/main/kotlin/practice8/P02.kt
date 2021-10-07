@@ -53,6 +53,8 @@ fun main() {
                 team1leaveMax = team1get/numberOfYCToLeaveInTeamOne
                 if(numberOfYCToLeaveInTeamOne==1){
                     team1leaveMin = team1get/numberOfYCToLeaveInTeamOne
+                }else if(numberOfYCToLeaveInTeamOne==2){
+                    team1leaveMin = team1get-numberOfPlayersInTeamOne
                 }else {
                     team1leaveMin = team1get%(numberOfYCToLeaveInTeamOne-1)
                 }
@@ -75,6 +77,8 @@ fun main() {
                 team2leaveMax = team2get/numberOfYCToLeaveInTeamTwo
                 if(numberOfYCToLeaveInTeamTwo==1){
                     team2leaveMin = team2get/numberOfYCToLeaveInTeamTwo
+                }else if(numberOfYCToLeaveInTeamTwo==2){
+                    team2leaveMin = team2get-numberOfPlayersInTeamTwo
                 }else {
                     team2leaveMin = team2get%(numberOfYCToLeaveInTeamTwo-1)
                 }
