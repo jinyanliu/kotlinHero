@@ -54,9 +54,17 @@ fun main() {
                 if(numberOfYCToLeaveInTeamOne==1){
                     team1leaveMin = team1get/numberOfYCToLeaveInTeamOne
                 }else if(numberOfYCToLeaveInTeamOne==2){
-                    team1leaveMin = team1get-numberOfPlayersInTeamOne
+                    if(team1get<=numberOfPlayersInTeamOne){
+                        team1leaveMin = 0
+                    }else {
+                        team1leaveMin = team1get-numberOfPlayersInTeamOne
+                    }
                 }else {
-                    team1leaveMin = team1get%(numberOfYCToLeaveInTeamOne-1)
+                    if(team1get<=numberOfPlayersInTeamOne*(numberOfYCToLeaveInTeamOne-1)){
+                        team1leaveMin = 0
+                    }else {
+                        team1leaveMin = team1get-(numberOfPlayersInTeamOne*(numberOfYCToLeaveInTeamOne-1))
+                    }
                 }
             }
         }
@@ -78,9 +86,17 @@ fun main() {
                 if(numberOfYCToLeaveInTeamTwo==1){
                     team2leaveMin = team2get/numberOfYCToLeaveInTeamTwo
                 }else if(numberOfYCToLeaveInTeamTwo==2){
-                    team2leaveMin = team2get-numberOfPlayersInTeamTwo
+                    if(team2get<=numberOfPlayersInTeamTwo){
+                        team2leaveMin = 0
+                    }else {
+                        team2leaveMin = team2get-numberOfPlayersInTeamTwo
+                    }
                 }else {
-                    team2leaveMin = team2get%(numberOfYCToLeaveInTeamTwo-1)
+                    if(team2get<=numberOfPlayersInTeamTwo*(numberOfYCToLeaveInTeamTwo-1)){
+                        team2leaveMin = 0
+                    }else {
+                        team2leaveMin = team2get-(numberOfPlayersInTeamTwo*(numberOfYCToLeaveInTeamTwo-1))
+                    }
                 }
 
             }
