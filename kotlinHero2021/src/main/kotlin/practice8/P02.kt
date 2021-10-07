@@ -15,7 +15,6 @@ import java.util.Scanner
  */
 fun main() {
 
-    val resultList = arrayListOf<Long>()
     val scanner = Scanner(System.`in`)
 
 
@@ -29,6 +28,7 @@ fun main() {
 
     val min = mutableListOf<Int>()
     val max = mutableListOf<Int>()
+
     for(num in 0..totalCards){
 
         val team1get = num
@@ -46,12 +46,16 @@ fun main() {
             team1leaveMax = 0
             team1leaveMin= 0
         }else {
-            if(team1get/numberOfYCToLeaveInTeamOne == numberOfPlayersInTeamOne){
-                team1leaveMax = team1get/numberOfYCToLeaveInTeamOne
-                team1leaveMin= team1get/numberOfYCToLeaveInTeamOne
+            if(team1get==numberOfPlayersInTeamOne*numberOfYCToLeaveInTeamOne){
+                team1leaveMax = numberOfPlayersInTeamOne
+                team1leaveMin= numberOfPlayersInTeamOne
             }else {
                 team1leaveMax = team1get/numberOfYCToLeaveInTeamOne
-                team1leaveMin = team1get%(numberOfYCToLeaveInTeamOne-1)
+                if(numberOfYCToLeaveInTeamOne==1){
+                    team1leaveMin = team1get/numberOfYCToLeaveInTeamOne
+                }else {
+                    team1leaveMin = team1get%(numberOfYCToLeaveInTeamOne-1)
+                }
             }
         }
 
@@ -64,9 +68,9 @@ fun main() {
             team2leaveMax = 0
             team2leaveMin= 0
         }else {
-            if(team2get/numberOfYCToLeaveInTeamTwo == numberOfPlayersInTeamTwo){
-                team2leaveMax = team2get/numberOfYCToLeaveInTeamTwo
-                team2leaveMin= team2get/numberOfYCToLeaveInTeamTwo
+            if(team2get==numberOfPlayersInTeamTwo*numberOfYCToLeaveInTeamTwo){
+                team2leaveMax = numberOfPlayersInTeamTwo
+                team2leaveMin= numberOfPlayersInTeamTwo
             }else {
                 team2leaveMax = team2get/numberOfYCToLeaveInTeamTwo
                 if(numberOfYCToLeaveInTeamTwo==1){
